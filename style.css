@@ -16,7 +16,6 @@
   box-sizing: border-box;
   font-family: 'Fraunces', serif;
   font-family: 'Barlow', sans-serif;
-  font-size: 18px;
 }
 * a {
   text-decoration: none;
@@ -28,11 +27,21 @@
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
 body {
+  font-size: 18px;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  max-width: 1440px;
+
+  width: 100vw;
 }
 header {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-image: url(images/desktop/image-header.jpg);
   background-size: cover;
@@ -84,7 +93,6 @@ main {
 main img {
   justify-self: center;
   align-self: end;
-
   grid-row: 2;
 }
 
@@ -97,4 +105,104 @@ main img {
   color: white;
   text-transform: uppercase;
   letter-spacing: 4px;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /* grid-template-rows: repeat(4, 46%); */
+}
+.main-content-img img {
+  width: 100%;
+  height: 100%;
+}
+/* s */
+.main-content-text {
+  padding: 15%;
+}
+.main-content-text h2 {
+  font-size: 2.8rem;
+  font-family: 'Fraunces', serif;
+  color: var(--veryDarkDesaturatedBlue);
+  font-weight: 900;
+  margin-bottom: 1em;
+}
+.main-content-text p {
+  color: var(--darkGrayishBlue);
+  line-height: 1.5;
+  font-size: 1rem;
+  margin-bottom: 2em;
+}
+.main-content-text a {
+  /* box-shadow: 0px 4px 0px 0px black; */
+  text-transform: uppercase;
+  font-family: 'Fraunces', serif;
+  color: var(--veryDarkDesaturatedBlue);
+  font-size: 1rem;
+  position: relative;
+}
+.l2::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: var(--SoftRed);
+  bottom: 3px;
+  left: 0;
+  z-index: -1;
+}
+.l::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: var(--Yellow);
+  bottom: 3px;
+  left: 0;
+  z-index: -1;
+}
+
+.main-content-both {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+
+  position: relative;
+}
+.main-content-both h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+
+  z-index: 1;
+}
+.main-content-both p {
+  margin-bottom: 13%;
+  margin-left: 21%;
+  margin-right: 21%;
+  text-align: center;
+  margin-top: 1em;
+
+  z-index: 1;
+}
+.main-content-text-1 {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-content-both-img {
+  width: 100%;
+  height: 100%;
+}
+.f2 {
+  color: var(--DarkBlue);
+}
+.f1 {
+  color: var(--DarkDesaturatedCyan);
+}
+.testimonial {
+  display: grid;
 }
